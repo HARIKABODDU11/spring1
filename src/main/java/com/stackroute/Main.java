@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println(movie == movie1);
 
-
+        ((ClassPathXmlApplicationContext)context).close();
 
 
     }
