@@ -7,7 +7,8 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
+public class Movie{
+    //Movie “has a” Actor that can be initialized via the corresponding setter method.
     Actor actor;
 
     public Movie(){ }
@@ -22,23 +23,5 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
     public void setActor(Actor actor) {
         this.actor = actor;
-    }
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("ApplicationContext");
-
-    }
-
-    @Override
-    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("BeanFactory");
-
-    }
-
-    @Override
-    public void setBeanName(String s) {
-        System.out.println("BeanName");
-
     }
 }
