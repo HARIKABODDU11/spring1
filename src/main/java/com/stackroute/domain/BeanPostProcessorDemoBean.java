@@ -5,6 +5,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
 public class BeanPostProcessorDemoBean implements BeanPostProcessor {
+    //Override the required methods
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
