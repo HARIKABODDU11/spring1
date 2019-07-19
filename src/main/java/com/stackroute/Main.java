@@ -17,15 +17,18 @@ import org.springframework.core.io.ClassPathResource;
 public class Main {
     public static void main(String[] args)
     {
+        
+        
+       //  intialize ApplicationContext with beanx.xml
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         Movie  movie=context.getBean("movie",Movie.class);
         movie.displayActor();
 
-
+       //  intialize  XmlBeanFactory with beanx.xml
         BeanFactory beanFactory=new XmlBeanFactory(new ClassPathResource("beans.xml"));
         Movie movie1=(Movie) beanFactory.getBean("movie");
         movie1.displayActor();
-
+       //  intialize  BeanDefinitionRegistry and BeanDefinitionReader with beanx.xml
         DefaultListableBeanFactory factory=new DefaultListableBeanFactory();
         BeanDefinitionRegistry registry=new GenericApplicationContext(factory);
         BeanDefinitionReader reader = new XmlBeanDefinitionReader(registry);
