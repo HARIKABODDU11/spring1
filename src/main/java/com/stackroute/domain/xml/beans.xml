@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
+       //bean creation of actor class
 <bean id="ramkrishna" class="com.stackroute.domain.Actor" >
     <constructor-arg name="name" index="0" type="java.lang.String" value="harika"></constructor-arg>
     <constructor-arg name="gender" index="1" type="java.lang.String" value="female"></constructor-arg>
@@ -21,7 +22,7 @@
         <constructor-arg name="age" index="2" type="int" value="12"></constructor-arg>
 
     </bean>
-
+//bean creation of movie class
     <bean name="movie,movie1" class="com.stackroute.domain.Movie" scope="prototype">
         <constructor-arg name="actor" ref="ramkrishna"></constructor-arg>
 
