@@ -4,3 +4,4 @@
 *.ipr
 *.ids
 *.orig
+target/
