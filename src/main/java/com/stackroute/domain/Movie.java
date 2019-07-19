@@ -6,8 +6,9 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-
+//Implement ApplicationContextAware, BeanFactoryAware, BeanNameAware in the movie class
 public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
+    //Movie “has a” Actor that can be initialized via the corresponding setter method.
     Actor actor;
 
     public Movie(){ }
