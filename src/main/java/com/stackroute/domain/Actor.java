@@ -5,7 +5,7 @@ public class Actor {
     String gender;
     int age;
 
-
+  //setter methods for actor paramaters
     public void setGender(String gender) {
         this.gender = gender;
     }
