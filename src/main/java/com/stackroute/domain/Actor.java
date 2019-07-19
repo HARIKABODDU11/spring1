@@ -1,6 +1,7 @@
 package com.stackroute.domain;
 
 public class Actor {
+    //Actor has two String properties, name and gender, and an age property of type int.
     String name;
     String gender;
     int age;
@@ -10,7 +11,7 @@ public class Actor {
         this.gender = gender;
         this.age = age;
     }
-
+   //getter and setter methods for actor parameters
     public String getName() {
         return name;
     }
