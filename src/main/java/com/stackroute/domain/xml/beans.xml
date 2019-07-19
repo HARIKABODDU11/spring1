@@ -3,12 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       //using property based injection for actor class
 <bean id="ramkrishna" class="com.stackroute.domain.Actor" >
     <property name="name" value="harika"></property>
     <property name="gender" value="female"></property>
     <property name="age" value="12"></property>
 
 </bean>
+       //using property based injection for  movie class
 
     <bean id="movie" class="com.stackroute.domain.Movie" >
         <property name="actor" ref="ramkrishna"></property>
